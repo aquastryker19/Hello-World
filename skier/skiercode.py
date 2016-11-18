@@ -30,7 +30,7 @@ class SkierClass(pygame.sprite.Sprite):
         self.image = pygame.image.load(skier_images[self.angle])
         self.rect = self.image.get_rect()
         self.rect.center = center
-        speed = [self.angle, 6 - abs(self.angle) * 2]
+        speed = [self.angle,30  - abs(self.angle) * 2]
         return speed
     
     def move(self, speed):

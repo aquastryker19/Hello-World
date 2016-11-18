@@ -6,7 +6,8 @@ Created on Fri Jul  1 19:11:58 2016
 """
 #MADE BY SKYE THE AMAZING :) ch 10
 import pygame, sys, random
-
+import os
+os.chdir('skier')
 skier_images = ['skier_down.png', 'skier_right1.png', 'skier_right2.png', 'skier_left2.png', 'skier_left1.png']
 
 class SkierClass(pygame.sprite.Sprite):
@@ -75,7 +76,11 @@ def updateObstacleGroup(map0, map1):
     for ob in map0: obstacles.add(ob)
     for ob in map1: obstacles.add(ob)
     return obstacles
+import pdb as db
+from pdb import set_trace as st
 
+#st()
+os.chdir('/home/pi/skye/Hello-World/skier')
 pygame.init()
 screen = pygame.display.set_mode([640,640])
 clock = pygame.time.Clock()
@@ -101,4 +106,4 @@ while True:
             elif event.key == pygame.K_RIGHT:
                 speed = skier.turn(1)
     skier.move(speed)
-    map_position += speed[1]h
+    map_position += speed[1]
